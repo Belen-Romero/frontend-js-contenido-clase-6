@@ -1,0 +1,225 @@
+/* Reset de css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  /* Sin congiguracion el rem vale: */
+  /* 1rem = 16px */
+
+  /* Para que 1 rem = 10px */
+  font-size: 62.5%;
+}
+body {
+  font-family: "Saira Condensed", sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  background-color: #d21f3c;
+  color: #e5e6e8;
+
+  display: flex;
+  flex-direction: column;
+
+  min-height: 100vh;
+}
+
+.header {
+  background-color: #1d1a20;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__logo {
+  padding: 1rem;
+  margin-left: 2rem;
+
+  font-size: 3rem;
+  font-weight: bold;
+}
+.header__logo a {
+  color: #f7bb2b;
+  text-decoration: none;
+}
+
+.header__nav {
+  padding: 1rem;
+  margin-right: 2rem;
+}
+
+.header__nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.header__nav li {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.header__nav a {
+  color: #f7bb2b;
+  text-decoration: none;
+  display: inline-block;
+  padding: 1rem;
+}
+
+.footer {
+  background-color: #1d1a20;
+
+  padding: 2rem;
+  color: #f7bb2b;
+
+  /* hago flexibles al p y la nav */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer nav ul {
+  list-style: none;
+
+  /* hago flexibles a los li de la lista */
+  display: flex;
+  justify-content: center;
+  gap: 2rem; /* 20px */
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                    HOME                                    */
+/* -------------------------------------------------------------------------- */
+
+main {
+  width: 90%;
+
+  /* body dijo que sus hijos sean flexibles (header, main y footer) */
+  /* al aplicar la propiedad "flex: 1" a un hijo, le decimos que ese 
+  hijo siempre tomara el mayor espacio disponible */
+  flex: 1;
+
+  margin: 2rem auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main h1 {
+  font-size: 4rem;
+  margin: 2rem 0;
+}
+
+main .parrafo-home {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  width: 80%;
+}
+
+.productos-home {
+  width: 100%;
+}
+
+.productos-home h2 {
+  text-align: center;
+  font-size: 3rem;
+  padding: 1rem;
+  margin: 3rem;
+}
+
+.contenedor-tarjetas {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.tarjeta-producto {
+  background-color: #1d1a20;
+  padding: 1rem;
+  border-radius: 1rem;
+  width: 30rem;
+
+  /* hacemos flexibles los elementos del article */
+  /* los colocamos en columna y centrados */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  /* separacion */
+  gap: 1rem;
+}
+
+.tarjeta-producto h3 {
+  font-size: 2.5rem;
+}
+
+.tarjeta-producto p {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.tarjeta-producto img {
+  width: 100%;
+  border-radius: 0.5rem;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                  Contacto                                  */
+/* -------------------------------------------------------------------------- */
+
+.seccion-contacto {
+  width: 100%;
+
+  margin: 2rem auto;
+}
+
+.titulo-contacto {
+  font-size: 4rem;
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.form {
+  background-color: #1d1a20;
+  padding: 5rem;
+  border-radius: 1rem;
+  width: 30%;
+  margin: auto;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.campo-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.campo-form label {
+  font-size: 2rem;
+}
+.campo-form input,
+.campo-form textarea {
+  padding: 1rem;
+  font-size: 1.6rem;
+  border-radius: 0.5rem;
+  border: none;
+}
+
+.form button {
+  background-color: #d21f3c;
+  color: #e5e6e8;
+  border: none;
+  padding: 1rem;
+  font-size: 2rem;
+  font-weight: bold;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}

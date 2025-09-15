@@ -1,0 +1,72 @@
+/* Reset de css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  /* Sin congiguracion el rem vale: */
+  /* 1rem = 16px */
+
+  /* Para que 1 rem = 10px */
+  font-size: 62.5%;
+}
+body {
+  font-family: "Saira Condensed", sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  background-color: #d21f3c;
+  color: #e5e6e8;
+
+  display: flex;
+  flex-direction: column;
+
+  min-height: 100vh;
+}
+/* Contenedor principal: activa flex */
+.layout {
+  display: flex; /* Activa Flexbox en los hijos (sidebar y contenido) */
+  gap: 1rem; /* Espacio entre ellos */
+  padding: 1rem;
+  background: #1d1a20;
+}
+
+/* Barra lateral */
+.sidebar {
+  flex: 0 0 250px; /* no crece, no se achica, base fija de 250px */
+
+  background: #f7bb2b;
+  color: #1d1a20;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  text-align: center;
+}
+
+/* Contenido principal */
+.contenido {
+  flex: 1 1 auto; /* puede crecer, puede achicarse, base = su contenido */
+  background: #e5e6e8;
+  color: #1d1a20;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+/* Contenedor de tarjetas */
+.cards {
+  display: flex; /* activa Flexbox en las tarjetas */
+  flex-wrap: wrap; /* permite que pasen a otra línea si no entran */
+  gap: 1rem; /* espacio entre tarjetas */
+  margin-top: 1rem;
+}
+
+/* Cada tarjeta */
+.card {
+  flex: 0 1 200px; /* puede crecer (1), puede achicarse (1), base de 200px */
+  background: #1d1a20;
+  color: #f7bb2b;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  font-size: 1.8rem;
+}
