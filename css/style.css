@@ -189,7 +189,9 @@ main .parrafo-home {
   background-color: #1d1a20;
   padding: 5rem;
   border-radius: 1rem;
-  width: 30%;
+
+  width: 60rem; /* ancho relativo */
+
   margin: auto;
 
   display: flex;
@@ -222,4 +224,33 @@ main .parrafo-home {
   font-weight: bold;
   border-radius: 0.5rem;
   cursor: pointer;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                media queries                               */
+/* -------------------------------------------------------------------------- */
+@media (max-width: 768px) {
+  .header {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .header__logo,
+  .header__nav {
+    margin: 0;
+  }
+
+  .contenedor-tarjetas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tarjeta-producto {
+    width: 80%;
+  }
+  .form {
+    width: 80%;
+    min-width: 400px;
+  }
 }
