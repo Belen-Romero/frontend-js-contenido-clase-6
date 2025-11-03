@@ -91,6 +91,37 @@ body {
 }
 
 /* -------------------------------------------------------------------------- */
+/*                              👉Nuevo: BOTONES                              */
+/* -------------------------------------------------------------------------- */
+.btn {
+  background-color: #d21f3c;
+  color: #e5e6e8;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 2rem;
+  font-weight: bold;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+}
+
+.btn:hover {
+  background-color: #b71c34;
+}
+
+.btn-eliminar-carrito {
+  background-color: #1d1a20;
+  border: 2px solid #d21f3c;
+}
+.btn-vaciar-carrito {
+  background-color: #f7bb2b;
+  color: #1d1a20;
+}
+.btn-vaciar-carrito:hover {
+  background-color: #e0aa24;
+}
+/* -------------------------------------------------------------------------- */
 /*                                    HOME                                    */
 /* -------------------------------------------------------------------------- */
 
@@ -132,7 +163,8 @@ main .parrafo-home {
   margin: 3rem;
 }
 
-.contenedor-tarjetas {
+.contenedor-tarjetas,
+#contenedor-carrito {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -144,6 +176,7 @@ main .parrafo-home {
   padding: 1rem;
   border-radius: 1rem;
   width: 30rem;
+  padding-bottom: 2rem;
 
   /* hacemos flexibles los elementos del article */
   /* los colocamos en columna y centrados */
@@ -167,6 +200,7 @@ main .parrafo-home {
 .tarjeta-producto img {
   width: 100%;
   border-radius: 0.5rem;
+  object-fit: cover;
 }
 
 /* -------------------------------------------------------------------------- */
@@ -224,6 +258,18 @@ main .parrafo-home {
   font-weight: bold;
   border-radius: 0.5rem;
   cursor: pointer;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                              👉Nuevo: Carrito                              */
+/* -------------------------------------------------------------------------- */
+.mensaje-carrito-vacio {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-top: 2rem;
+}
+.acciones-carrito {
+  margin-top: 2rem;
 }
 
 /* -------------------------------------------------------------------------- */

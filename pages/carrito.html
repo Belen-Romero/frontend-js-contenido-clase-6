@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carrito</title>
     <link rel="stylesheet" href="../css/style.css" />
-    <title>Document</title>
   </head>
   <body>
     <header class="header">
@@ -17,6 +17,7 @@
             <a href="../index.html">Home</a>
           </li>
           <li>
+            <!-- lo anulo con # porque no tengo pagina aun, es solo provisorio -->
             <a href="./contacto.html">Contacto</a>
           </li>
           <li>
@@ -29,34 +30,20 @@
     </header>
 
     <main>
-      <section class="seccion-contacto">
-        <h1 class="titulo-contacto">Contacto</h1>
-        <form
-          class="form"
-          action="https://formspree.io/f/xwpnleyj"
-          method="POST"
-        >
-          <div class="campo-form">
-            <label for="email"> Correo:</label>
-            <input id="email" type="email" name="email" />
-          </div>
-
-          <div class="campo-form">
-            <label for="mensaje"> Mensaje:</label>
-            <textarea id="mensaje" name="message"></textarea>
-          </div>
-
-          <!-- Asunto del mail que te llega -->
-          <input type="hidden" name="subject" value="Contacto desde el sitio" />
-
-          <!-- your other form fields go here -->
-          <button type="submit">Send</button>
-        </form>
+      <h1>Carrito de compras</h1>
+      <section id="contenedor-carrito">
+        <!-- Productos del carrito -->
+      </section>
+      <div class="acciones-carrito" id="acciones-carrito">
+        <!-- Botones de eliminar y finalizar compra se agregan desde JS -->
+      </div>
+      <section id="resumen-carrito">
+        <!-- Aca ira el resumen del carrito -->
       </section>
     </main>
-
     <footer class="footer">
       <p>Esta pagina la diseño Belu</p>
+      <p>&copy; 2025 Mi E-Commerce</p>
       <nav>
         <ul>
           <li>Instagram</li>
@@ -65,5 +52,6 @@
         </ul>
       </nav>
     </footer>
+    <script type="module" src="../js/carrito.js"></script>
   </body>
 </html>

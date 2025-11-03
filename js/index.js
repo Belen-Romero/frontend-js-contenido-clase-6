@@ -1,33 +1,48 @@
-// Definicion de una variable con let
-let nombre = "Belen";
+import { productos } from "./productos.js";
+import { agregarAlCarrito } from "./funcionesCarrito.js";
+import { obtenerCarrito } from "./storage.js";
+import { actualizarContador } from "./ui.js";
 
-//Modificacion de una variable que ya existe
-nombre = "Ana";
+//El evento "DOMContentLoaded" sirve para que no intentemos acceder a un nodo HTML con el
+//  codigo js antes de que el navegador lo cree:
+//Por ejemplo: que no lea un getElementById cuando aun no existe ese id.
+document.addEventListener("DOMContentLoaded", () => {
+  //Accedemos al contenedor donde queremos generar los articles
+  const contenedor = document.getElementById("contenedor-tarjetas");
 
-const PI = 3.14;
-let numero = 12;
-let numeroString = "20";
-let booleano = true;
+  //Pedimos la info de productos en carrito para mostrar el numero si hay productos
+  const carrito = obtenerCarrito();
+  actualizarContador(carrito);
 
-//console.log() equivalente a funcion print() para mostrar datos en consola
-console.log("Resultado de numero + numeroString:", numero + numeroString);
+  productos.forEach((producto) => {
+    // creamos los articles y sus contenidos
+    const tarjeta = document.createElement("article");
+    tarjeta.classList.add("tarjeta-producto");
 
-console.log(
-  "Resultado de numero + parseInt(numeroString):",
-  numero + parseInt(numeroString)
-);
-console.log("Resultado de numero - numeroString:", numero - numeroString);
+    const img = document.createElement("img");
+    img.src = producto.img;
+    img.alt = producto.nombre;
 
-/* -------------------------------------------------------------------------- */
-/*                      Pedir datos al usuario: prompt()                      */
-/* -------------------------------------------------------------------------- */
-let entradaInput = prompt("Ingrese su nombre:");
+    const titulo = document.createElement("h3");
+    titulo.textContent = producto.nombre;
 
-console.log(isNaN(entradaInput));
+    const precio = document.createElement("p");
+    precio.textContent = `$${producto.precio}`;
 
-/* -------------------------------------------------------------------------- */
-/*                          Mostrar alertas: alert()                          */
-/* -------------------------------------------------------------------------- */
+    const boton = document.createElement("button");
+    boton.classList.add("btn");
+    boton.textContent = "Agregar al carrito";
 
-//Simil f-strings para interpolar variables
-alert(`Ingresaste: ${entradaInput} - Bienvenido!`);
+    boton.addEventListener("click", () => {
+      agregarAlCarrito(producto);
+    });
+
+    // Armar la estructura
+    tarjeta.appendChild(img);
+    tarjeta.appendChild(titulo);
+    tarjeta.appendChild(precio);
+    tarjeta.appendChild(boton);
+
+    contenedor.appendChild(tarjeta);
+  });
+});

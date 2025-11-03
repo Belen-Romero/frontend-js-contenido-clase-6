@@ -26,6 +26,11 @@
             <!-- lo anulo con # porque no tengo pagina aun, es solo provisorio -->
             <a href="./pages/contacto.html">Contacto</a>
           </li>
+          <li>
+            <a href="./pages/carrito.html" class="carrito-icono">
+              🛒 <span id="contador-carrito">0</span>
+            </a>
+          </li>
         </ul>
       </nav>
     </header>
@@ -45,8 +50,8 @@
       <section class="productos-home">
         <h2>Algunos de nuestros productos</h2>
 
-        <div class="contenedor-tarjetas">
-          <article class="tarjeta-producto">
+        <div id="contenedor-tarjetas" class="contenedor-tarjetas">
+          <!-- <article class="tarjeta-producto">
             <img src="./img/arc.png" alt="Portada de juego The Finals" />
             <h3>The Finals game</h3>
             <p>Precio: $40</p>
@@ -67,7 +72,7 @@
             <img src="./img/Ops.png" alt="DLC de juego The Finals" />
             <h3>DLC: Ops set</h3>
             <p>Precio: $10</p>
-          </article>
+          </article> -->
         </div>
       </section>
     </main>
@@ -83,6 +88,6 @@
     </footer>
 
     <!-- Enlazo el js antes del ciere del body -->
-    <script src="./js/index.js"></script>
+    <script type="module" src="./js/index.js"></script>
   </body>
 </html>
